@@ -1,0 +1,42 @@
+<style>
+  
+  table,
+  tr {
+    border: 1px solid #ff00ff;
+  }
+  td {
+      border: 1px solid #333;
+      font-size: 55px;
+  }
+
+  thead,
+  tfoot {
+      background-color: #3399ff;
+      color: #fff;
+      font-size: 55px;
+  }
+</style>
+
+<div>
+  <img src="https://lh3.googleusercontent.com/SStgS1tlelxnOVtx82XjctQ6fFIpw5zMsdCHScHfukJglnEYhq7aI5VHyOvVALT7vlLT=s85" alt="kitty">
+</div>
+<table>
+    <thead>
+       <!-- writing headers here -->
+        <tr>
+          <th colspan='1'>Name</th>
+          <th colspan='1'>DOB</th>
+          <th colspan='1'>Color</th>
+          <th colspan='1'>Sex</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @cat.name.capitalize %> </td>
+        <td><%= @cat.birth_date %> </td>
+        <td><%= @cat.color %> </td>
+        <td><%= @cat.sex %> </td>
+      </tr>
+    </tbody>
+</table>
+
