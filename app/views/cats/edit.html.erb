@@ -1,14 +1,23 @@
 <form action="<%= cats_url %>" method="post">
+  <input type="hidden" name="_method" value="patch">
   <label> 
     Name:
-    <input type="text" name="cat[name]" value="">
+    <input type="text" name="cat[name]" value="<%= @cat.name %>">
   </label>
   <br>
   
+  <% if @cat.sex == "M" %>
+    <% male = "checked" %>
+    <% female = "" %>
+  <% else %>
+    <% female = "checked" %>
+    <% male = "" %>
+  <% end %>  
+  
   <label> 
     Sex:
-    M: <input type="radio" name="cat[sex]" value="M">
-    F: <input type="radio" name="cat[sex]" value="F">
+    M: <input type="radio" name="cat[sex]" value="M" checked=<%= male %>>
+    F: <input type="radio" name="cat[sex]" value="F" checked=<%= female %>>
   </label>
   <br>
   
